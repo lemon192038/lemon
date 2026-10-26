@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>インクバトル 3D</title>
+<style>
+:root{--bg:#f4f1ea;--fg:#222;--card:#fff;--floor:#ece7dc;--wall:#4a4f5c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15161a;--fg:#eee;--card:#23252b;--floor:#2b2d34;--wall:#6b7285}}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:system-ui,"Hiragino Sans","Noto Sans JP",sans-serif;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
+canvas{position:fixed;inset:0;width:100%;height:100%}#ui,#stain{pointer-events:none}
+#lifew{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(36px + env(safe-area-inset-bottom,0px));display:flex;gap:3px;pointer-events:none}#lifew i{width:22px;height:11px;border-radius:3px;background:#e8344a}#lifew i.off{background:var(--card);opacity:.6}
+#cross{position:fixed;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border:2px solid #fff;border-radius:50%;box-shadow:0 0 0 1px rgba(0,0,0,.5);pointer-events:none;display:none}
+#fire{position:fixed;right:calc(28px + env(safe-area-inset-right,0px));bottom:calc(28px + env(safe-area-inset-bottom,0px));width:112px;height:112px;border-radius:50%;margin:0;padding:0;font-size:18px;background:#ff6a00;opacity:.85;touch-action:none}#fire.on{opacity:1;transform:scale(.93)}
+#sq{position:fixed;right:calc(30px + env(safe-area-inset-right,0px));bottom:calc(156px + env(safe-area-inset-bottom,0px));margin:0;padding:12px 18px;font-size:16px;background:#7b3fe4;opacity:.92;touch-action:none;white-space:nowrap}
+#jump{position:fixed;right:calc(158px + env(safe-area-inset-right,0px));bottom:calc(40px + env(safe-area-inset-bottom,0px));width:88px;height:88px;border-radius:50%;margin:0;padding:0;font-size:16px;background:#12a150;opacity:.9;touch-action:none}#jump.on{opacity:1;transform:scale(.93)}
+#tg{margin:0;padding:8px 14px;font-size:15px;pointer-events:auto;background:#444;white-space:nowrap}
+#inkw{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));width:min(320px,40vw);height:14px;border-radius:7px;background:var(--card);overflow:hidden;pointer-events:none;opacity:.9}#ink{height:100%;width:100%;background:#1e88ff}
+#hud{position:fixed;left:0;right:0;top:env(safe
